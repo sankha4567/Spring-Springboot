@@ -19,13 +19,15 @@ public class AppConfig {
   }
 
     @Bean
-    @Primary
+
 //    @Scope("prototype")
     public Laptop laptop(){
         return new Laptop();
     }
   @Bean
-    public Dev dev( Computer comp){
+  //by using qualifier we mention which bean i want to use here we have to provide the bean name
+  //or else we can make a bean as the primary one
+    public Dev dev(@Qualifier("laptop") Computer comp){
        Dev dev = new Dev();
        dev.setAge(22);
        dev.setComputer(comp);
