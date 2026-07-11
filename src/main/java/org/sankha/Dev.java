@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Dev {
-   @Autowired
-//   @Qualifier("dekstop") it is nothing but class name with first acharacter as small
-@Qualifier("johnny")
+//   @Autowired
+////   @Qualifier("dekstop") it is nothing but class name with first acharacter as small
+//@Qualifier("johnny")
 //   we can give differnt name to the bean via component
     private Computer computer;
 
@@ -21,6 +21,8 @@ public class Dev {
     public Computer getComputer(){
         return computer;
     }
+    @Autowired
+    @Qualifier("johnny")
     public void setComputer(Computer computer){
         this.computer=computer;
     }
