@@ -1,11 +1,13 @@
 package org.sankha;
 
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 //if there is qualifier used if we used the Primary qualifier get most priority
 @Primary
+@Scope("prototype")
 public class Laptop implements Computer {
     public Laptop(){
         System.out.println("Laptop Constructor");

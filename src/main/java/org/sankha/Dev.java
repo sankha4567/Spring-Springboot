@@ -2,6 +2,7 @@ package org.sankha;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,10 +11,11 @@ public class Dev {
 ////   @Qualifier("dekstop") it is nothing but class name with first acharacter as small
 //@Qualifier("johnny")
 //   we can give differnt name to the bean via component
+
     private Computer computer;
 
 
-
+    @Value("21")
     private int age;
     public Dev(){
         System.out.println("Dev Mode....");
