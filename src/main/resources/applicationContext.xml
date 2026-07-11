@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="com" class="org.sankha.Dev" autowire="byName">
+<!--      <property name="computer" ref="desktop"/>-->
+<!-- when we are doing autowire by name then the variable prsent and the object which have same ref go it connected-->
+<!--        if we have autowire by name /ref if we are explicitly refering via property it get highest priority-->
+<!--        we can do autowire by type where they have same type get executed-->
+<!--        we can restrict who can use the bean-->
+<!--         <property name="computer">-->
+<!--             <bean id="machine" class="org.sankha.Laptop" primary="true"/>-->
+<!--         </property>-->
+
+    </bean>
+
+
+   <bean id="computer" class="org.sankha.Laptop" primary="true"/>
+<!--    when i am giving this in case of confusion it gets highest priority.but if we are defining explicitly by property then it get highest priority-->
+  <bean id="desktop" class="org.sankha.Dekstop"/>
+</beans>
